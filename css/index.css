@@ -19,13 +19,13 @@
 .all{
     width: 100%;
     height: fit-content;
-    background-color: gold;
+    /* background-color: gold; */
 }
 .header{
     width: 100%;
     height: 20%;
     padding-top: 1rem;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +34,7 @@
     height: fit-content;
     width: fit-content;
     margin-left: 3rem;
-    background-color: black;
+    /* background-color: black; */
     border-radius: 50%;
     border: none;
 }
@@ -73,7 +73,7 @@
 .site_desc{
     width: 100%;
     height: fit-content;
-    background-color: brown;
+    /* background-color: brown; */
 }
 .site_desc div{
     width: fit-content;
@@ -103,7 +103,7 @@ div .heading h2{
     width: 59rem;
     height: 20rem;
     margin: auto;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 .every_step{
     width: 100%;
@@ -111,26 +111,26 @@ div .heading h2{
     gap: 2rem;
     display: flex;
     flex-direction: row;
-    background-color: blue;
+    /* background-color: blue; */
 }
 .step{
     height: 15rem;
-    width: 19rem;
+    width: 15rem;
     gap: 2rem;
     background-color: var(--background-secondary);
     border: 3px solid var(--primary-color);
     border-radius: 15px;
 }
-.step p{
-    font-size: 28px;
-    text-align: justify;
-    margin: auto .5rem auto .5rem;
+.step h3{
+    font-size: 25px;
+    font-weight: lighter;
+    text-align: center;
 }
 .benefits{
     width: 59rem;
     height: fit-content;
     margin: auto;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 .every_benefit{
     width: 100%;
@@ -138,7 +138,7 @@ div .heading h2{
     display: flex;
     gap: 1rem;
     flex-direction: row;
-    background-color: blue;
+    /* background-color: blue; */
 }
 .benefit{
     height: 10rem;
@@ -166,6 +166,12 @@ footer div{
     width: 100%;
     height: 10rem;
 }
-h3{
+footer div h3{
     color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+footer div p{
+    color: var(--info-color);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
