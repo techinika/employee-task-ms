@@ -98,9 +98,13 @@ input::placeholder{
     color: var(--white);
     font-size: larger;
 }
-.submit:hover{
+.submit a:hover{
     color: var(--primary-color);
     cursor: pointer;
+}
+.submit a{
+    text-decoration: none;
+    color: var(--white);
 }
 
 .all{

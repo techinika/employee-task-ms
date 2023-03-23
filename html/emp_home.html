@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="all">
+        <!-- <div class="side"></div> -->
         <div class="side_bar">
             <div class="identity">
                 <div class="profile">
@@ -35,7 +36,7 @@
                     </div>
                     <div class="nav_name">Participants</div>
                 </div>
-                <div class="nav_btn" id="seting_nav">
+                <div class="nav_btn" id="setting_nav">
                     <div class="nav_icon">
                         <img src="../imgs/user-profile.png" alt="">
                     </div>
@@ -46,7 +47,7 @@
                 <div class="logout_img">
                     <img src="../imgs/logout.png" alt="">
                 </div>
-                <button class="logout_btn">Log out</button>
+                <button class="logout_btn"><a href="../index.html">Log out</a></button>
             </div>
         </div>
         
@@ -252,13 +253,13 @@
         <!-- ALL ABOUT PROFILE SETTINGS -->
 
         <div class="profile_settings">
-            <h2 class="title">Participants <img src="../imgs/user-profile.png" alt=""></h2>
+            <h2 class="title">Profile settings <img src="../imgs/user-profile.png" alt=""></h2>
             <div class="prof_body">
                 <h2 class="title">Profile picture</h2>
                 <div class="change_pic_div">
                     <div class="prof_id">
                         <img src="../imgs/user.png" alt="">
-                        <p class="username">Username</p>
+                        <p class="username">Aime Bruce</p>
                     </div>
                     <div class="prof_more">
                         <p class="prof_desc">Profile picture helps others to recognize you</p>
@@ -269,19 +270,32 @@
                     </div>
                 </div>
                 <div class="change_names_div">
-                    Firstname: <br><input type="text" id="">
-                    Lastname: <br><input type="text" id=""><br><br>
-                </div>
+                    <div>
+                        <p>Firstname: </p> <input type="text" id="">
+                    </div>
+                    <div>
+                        <p>Lastname: </p> <input type="text" id="">
+                    </div>
+                </div><br>
                 <div class="change_desc_div">
-                    Description: <br><input type="text" id=""><br><br>
-                </div>
+                    <div>
+                        <p>Description: </p> <input type="text" id="">
+                    </div>
+                </div><br>
                 <div class="change_location_div">
-                    Country: <br><input type="text" id="">
-                    City: <br><input type="text" id=""><br><br>
-                </div>
+                    <div>
+                        <p>Country: </p> <input type="text" id="">
+                    </div>
+                    <div>
+                        <p>City: </p> <input type="text" id=""><br>
+                    </div>
+                </div><br>
+                <button class="save">Save</button>
+                <button class="cancel">Cancel</button>
             </div>
         </div>
     </div>
 
+    <script src="../js/emp_home.js"></script>
 </body>
 </html>
