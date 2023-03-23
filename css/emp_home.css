@@ -8,7 +8,7 @@
     --button-radius: 20px;
     --white: white;
     --black: black;
-    --grey: grey;
+    --grey: rgba(217, 217, 217, 1);
     --red: red;
 }
 
@@ -28,6 +28,8 @@
 .all:hover{
     cursor: default;
 }
+
+/* SIDE BAR */
 
 .side_bar{
     width: 25rem;
@@ -62,6 +64,8 @@
     font-weight: bold;
     font-family: Georgia, 'Times New Roman';
 }
+
+/* NAVIGATION */
 .nav_btn{
     /* margin-left: 20%; */
     width: 100%;
@@ -125,22 +129,28 @@ img{
     cursor: pointer;
 }
 
-.body{
+/* ALL ABOUT HOME */
+
+.home{
     width: 60rem;
     height: 100vh;
     padding-left: 2rem;
     padding-top: 2rem;
+    overflow-y: scroll;
     /* background-color: burlywood; */
+    display: none;
 }
-.body .title{
+.home .title{
     font-family: Georgia, 'Times New Roman';
     color: var(--info-color);
+    margin-bottom: 1rem;
 }
 .unfinished_div{
     width: 100%;
     height: 27rem;
     display: flex;
     flex-direction: row;
+    margin-bottom: 1rem;
     gap: 1rem;
     padding: .5rem 0rem 0rem .5rem;
     background-color: var(--background-secondary);
@@ -190,4 +200,245 @@ img{
 }
 .report a{
     text-decoration: none;
+}
+.fin_div{
+    width: 32rem;
+    height: fit-content;
+    background-color: var(--background-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+}
+.task{
+    width: 100%;
+    height: fit-content;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: .5rem;
+}
+.task .task_title{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.task .review{
+    color: var(--primary-color);
+}
+.task .acc_date{
+    font-weight: bold;
+    float: right;
+}
+
+/* ALL ABOUT NOTIFICATIONS */
+.notifications{
+    width: 60rem;
+    height: 100vh;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    overflow-y: scroll;
+    /* background-color: chocolate; */
+    display: none;
+}
+.notifications .title{
+    font-family: Georgia, 'Times New Roman';
+    color: var(--black);
+    margin-bottom: 1rem;
+    /* margin-top: 1rem; */
+    gap: .5rem;
+}
+.notifications .not_body h2{
+    font-family: Georgia, 'Times New Roman';
+    color: var(--info-color);
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+.title img{
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+}
+.not_body{
+    width: 100%;
+    height: fit-content;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: .5rem;
+    border-radius: 10px;
+    background-color: var(--background-secondary);
+}
+.not_body div{
+    width: 100%;
+    height: fit-content;
+    padding: 0rem .5rem 0rem .5rem;
+}
+.not_body div .single_not{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--grey);
+    margin-top: .5rem;
+}
+.not_desc{
+    margin: auto auto auto 1rem;
+    font-size: 1.5rem;
+}
+.time{
+    width: 7rem;
+    height: fit-content;
+    /* background-color: aqua; */
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ALL ABOUT PARTICIPANTS */
+.participants{
+    width: 100%;
+    height: 100vh;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    overflow: scroll;
+    /* background-color: chocolate; */
+    display: none;
+}
+.participants .part_body h2{
+    font-family: Georgia, 'Times New Roman';
+    color: var(--info-color);
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+.all_part{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: .5rem;
+    border-radius: 10px;
+    background-color: var(--background-secondary);
+    overflow-x: visible;
+
+}
+.all_part .single_user{
+    width: 15rem;
+    height: 20rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem .5rem 1rem .5rem;
+    background-color: var(--grey);
+}
+.single_user img{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 12%;
+}
+.username{
+    font-size: 20px;
+    font-weight: bold;
+}
+.name , .depart_name{
+    font-size: 22px;
+}
+.depart_name{
+    font-weight: bold;
+    color: var(--primary-color);
+    float: right;
+}
+.your_dep{
+    width: 62.5rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    gap: 1rem;
+    background-color: var(--background-secondary);
+}
+.your_dep .single_user{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    border-radius: 10px;
+    width: 20rem;
+    height: 10rem;
+    gap: 1rem;
+}
+.single_user .user_contact{
+    gap:2rem;
+}
+.single_user .user_identity{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+/* ALL ABOUT PROFILE SETTINGS */
+.profile_settings{
+    width: 62.5rem;
+    height: 97vh;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    overflow-y: scroll;
+    background-color: chocolate;
+    /* display: none; */
+}
+.profile_settings .prof_body h2{
+    font-family: Georgia, 'Times New Roman';
+    font-size: 20px;
+    color: var(--info-color);
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+.prof_body{
+    width: fit-content;
+    height: 100%;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    background-color: var(--background-secondary);
+}
+.change_pic_div{
+    width: 100%;
+    height: fit-content;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+.prof_id img{
+    width: 12rem;
+    height: 12rem;
+}
+.prof_id .username{
+    font-size: 20px;
+    text-align: center;
+}
+.change_names_div , .change_desc_div , .change_location_div{
+    font-size: 20px;
+    font-weight: bold;
+    width: 54.7rem;
+    height: 3rem;
+    padding-top: 2rem;
+}
+input{
+    width: 20rem;
 }
