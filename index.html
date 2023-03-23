@@ -7,24 +7,47 @@
     <title>Home page</title>
     <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
+<body class="body">
+    <div class="overlay">
+        <div class="container">
+            <h2 class="log">Login</h2>
+            <img src="./imgs/cancel.png" alt="" class="close">
+            
+            <form>
+                <div>
+                    <input type="text" class="username" placeholder="Username">
+                    <input type="password" class="password" placeholder="Password">
+                    <button class="submit">Submit</button>
+                    <p>Forgot password? <a href="">Send code</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="all">
         <div class="header">
             <div class="logo_div">
                 <img src="./imgs/logo.png" alt="" class="logo_img">
             </div>
             <div class="continue">
-                <a href="./html/login.html"><button class="get_started">Get started</button></a>
-                <a href="./html/login.html"><button class="login">Login</button></a>
+                <button class="get_started">Get started</button>
+                <button class="login">Login</button>
                 <!-- <button class="login"><a href="./html/login.html">Login</a></button> -->
             </div>
         </div>
         <div class="site_desc">
             <div>
-                <p>
-                    Scheduling and improving time management by 
-                    assigning and submitting given tasks.
-                </p>
+                <img src="./imgs/people_working.PNG" alt="">
+                <div class="description">
+                    <p class="desc_1">
+                        Scheduling and improving time management by 
+                        assigning and submitting given tasks.
+                    </p>
+                    <P>
+                        As employee management system we provide managers with insights into 
+                        their workers, and helps them to better plan and improve work strategies 
+                        to easily control daily progress and increase productivity
+                    </P>
+                </div>
             </div>
         </div>
         <div class="steps">
@@ -89,5 +112,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
