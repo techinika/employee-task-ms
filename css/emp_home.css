@@ -143,11 +143,11 @@ img{
 /* ALL ABOUT HOME */
 
 .home{
-    width: 62.5rem;
+    width: 100%;
     height: 100vh;
     padding-left: 2rem;
     padding-top: 2rem;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     /* background-color: burlywood; */
     display: block;
 }
