@@ -85,6 +85,9 @@
     border-top-left-radius: 3rem;
     /* margin-left: 20%; */
 }
+a{
+    text-decoration: none;
+}
 .nav_btn:hover{
     cursor: pointer;
     background-color: var(--white);

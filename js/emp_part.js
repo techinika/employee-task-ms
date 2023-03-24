@@ -10,4 +10,4 @@ setInterval(()=>{
 
     your_dep.style.width = w;
     all_part.style.width = w;
-},1);
+},100);

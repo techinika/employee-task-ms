@@ -32,7 +32,7 @@
 /* SIDE BAR */
 
 .side{
-    width: 26rem;
+    width: 30rem;
     height: 100vh;
     position: absolute;
     padding-left: 2rem;
@@ -84,6 +84,9 @@
     border-bottom-left-radius: 3rem;
     border-top-left-radius: 3rem;
     /* margin-left: 20%; */
+}
+a{
+    text-decoration: none;
 }
 .nav_btn:hover{
     cursor: pointer;
@@ -147,7 +150,7 @@ img{
     height: 100vh;
     padding-left: 2rem;
     padding-top: 2rem;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     /* background-color: burlywood; */
     display: block;
 }
@@ -157,19 +160,20 @@ img{
     margin-bottom: 1rem;
 }
 .unfinished_div{
-    width: 100%;
-    height: 27rem;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
     border-radius: 10px;
     gap: 1rem;
+    overflow-x: scroll;
     padding: .5rem 0rem 0rem .5rem;
     background-color: var(--background-secondary);
 }
 .single_task{
-    width: 20rem;
-    height: 25rem;
+    max-width: 20rem;
+    min-width: 18rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     border: 2px solid var(--primary-color);
@@ -214,16 +218,16 @@ img{
     text-decoration: none;
 }
 .fin_div{
-    width: 32rem;
     height: fit-content;
     background-color: var(--background-secondary);
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    align-items:normal;
     justify-content: center;
 }
 .task{
-    width: 100%;
+    width: 60%;
     height: fit-content;
     border: 2px solid var(--primary-color);
     border-radius: 10px;
@@ -244,4 +248,103 @@ img{
 .task .acc_date{
     font-weight: bold;
     float: right;
+}
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 1000px) {
+    .side_bar {
+      background-color: lightblue;
+    }
+    .username{
+        display: none;
+    }
+    .profile img{
+        margin-left: 50%;
+    }
+    .nav_icon{
+        display: none;
+    }
+    .nav_name{
+        margin-left: 2rem;
+    }
+    .home .title{
+        font-family: Georgia, 'Times New Roman';
+        color: var(--black);
+        margin-bottom: 1rem;
+        font-size: large;
+    }
+    .unfinished_div{
+        gap: .5rem;
+    }
+    .single_task{
+        max-width: 20rem;
+        min-width: 15rem;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--primary-color);
+        border-radius: 15px;
+        align-items: center;
+        padding: 1rem .5rem 1rem .5rem;
+    }
+    .task_title{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Georgia;
+        margin-bottom: 2rem;
+    }
+    .task_desc{
+        font-size: 15px;
+        text-align: justify;
+    }
+    .submit{
+        background-color: var(--white);
+        color: var(--black);
+        font-size: 18px;
+        font-weight: bold;
+        height: 2rem;
+        width: 7rem;
+        border: none;
+        border-radius: 5px;
+        margin-top: 2rem;
+    }
+    .deadline{
+        display: none;
+    }
+    .problem{
+        align-items: end;
+        justify-content: end;
+    }
+    .submit{
+        display: none;
+    }
+    .task{
+        width: 100%;
+        height: 6rem;
+        padding-bottom: 2rem;
+    }
+    .task .task_title{
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    .task .review{
+        margin-top: 0rem;
+    }
+    .task .acc_date{
+        font-weight: bold;
+        float: right;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .nav_icon{
+        display: block;
+        margin-left: 2rem;
+    }
+    .nav_name{
+        display: none;
+    }
 }

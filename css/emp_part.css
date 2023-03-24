@@ -85,6 +85,9 @@
     border-top-left-radius: 3rem;
     /* margin-left: 20%; */
 }
+a{
+    text-decoration: none;
+}
 .nav_btn:hover{
     cursor: pointer;
     background-color: var(--white);
@@ -148,6 +151,7 @@ img{
     padding-left: 2rem;
     padding-top: 2rem;
     overflow-y: scroll;
+    overflow-x: hidden;
     /* background-color: chocolate; */
     /* display: none; */
 }
@@ -158,8 +162,8 @@ img{
     margin-bottom: .5rem;
 }
 .all_part{
-    width: fit-content;
     height: fit-content;
+    /* width: 65rem; */
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -168,6 +172,7 @@ img{
     padding-bottom: .5rem;
     padding-right: .5rem;
     border-radius: 10px;
+    overflow-x: scroll;
     background-color: var(--background-secondary);
 }
 .all_part .single_user{
@@ -202,7 +207,7 @@ img{
     float: right;
 }
 .your_dep{
-    width: 65rem;
+    /* width: 65rem; */
     height: fit-content;
     display: flex;
     flex-direction: row;

@@ -85,6 +85,9 @@
     border-top-left-radius: 3rem;
     /* margin-left: 20%; */
 }
+a{
+    text-decoration: none;
+}
 .nav_btn:hover{
     cursor: pointer;
     background-color: var(--white);
@@ -164,6 +167,7 @@ img{
     padding-top: 2rem;
     padding-right: 1rem;
     padding-left: 1rem;
+    padding-bottom: 1rem;
     border-radius: 10px;
     background-color: var(--background-secondary);
 }
