@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../css/emp_setting.css">
+</head>
+<body>
+    <div class="all">
+        <div class="side"></div>
+        <div class="side_bar">
+            <div class="identity">
+                <div class="profile">
+                    <img src="../imgs/user.png" alt="">
+                </div>
+                <div class="username">Username</div>
+            </div>
+            <div class="navigation_bar">
+                <a href="../html/emp_home.html">
+                    <div class="nav_btn" id="home_nav">
+                    <div class="nav_icon">
+                        <img src="../imgs/home.png" alt="">
+                    </div>
+                    <div class="nav_name">Home</div>
+                </div>
+                </a>
+                <a href="../html/emp_notif.html">
+                    <div class="nav_btn" id="notif_nav">
+                        <div class="nav_icon">
+                            <img src="../imgs/notification.png" alt="">
+                        </div>
+                        <div class="nav_name">Notifications</div>
+                    </div>
+                </a>
+                <a href="../html/emp_part.html">
+                    <div class="nav_btn" id="part_nav">
+                        <div class="nav_icon">
+                            <img src="../imgs/group.png" alt="">
+                        </div>
+                        <div class="nav_name">Participants</div>
+                    </div>
+                </a>
+                <a href="../html/emp_setting.html">
+                    <div class="nav_btn" id="setting_nav">
+                        <div class="nav_icon">
+                            <img src="../imgs/user-profile.png" alt="">
+                        </div>
+                        <div class="nav_name">Profile settings</div>
+                    </div>
+                </a>
+            </div>
+            <div class="logout_div">
+                <div class="logout_img">
+                    <img src="../imgs/logout.png" alt="">
+                </div>
+                <button class="logout_btn"><a href="../index.html">Log out</a></button>
+            </div>
+        </div>
+
+        <!-- ALL ABOUT PROFILE SETTINGS -->
+
+        <div class="profile_settings">
+            <h2 class="title">Profile settings <img src="../imgs/user-profile.png" alt=""></h2>
+            <div class="prof_body">
+                <h2 class="title">Profile picture</h2>
+                <div class="change_pic_div">
+                    <div class="prof_id">
+                        <img src="../imgs/user.png" alt="">
+                        <p class="username">Aime Bruce</p>
+                    </div>
+                    <div class="prof_more">
+                        <p class="prof_desc">Profile picture helps others to recognize you</p>
+                        <div class="change_prof_btns">
+                            <button class="change_pic">Change photo</button>
+                            <button class="take_pic">Take picture</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="change_names_div">
+                    <div>
+                        <p>Firstname: </p> <input type="text" id="">
+                    </div>
+                    <div>
+                        <p>Lastname: </p> <input type="text" id="">
+                    </div>
+                </div><br>
+                <div class="change_location_div">
+                    <div>
+                        <p>Country: </p> <input type="text" id="">
+                    </div>
+                    <div>
+                        <p>City: </p> <input type="text" id=""><br>
+                    </div>
+                </div><br>
+                <div class="change_desc_div">
+                    <div>
+                        <p>Description: </p> <input type="text" id="">
+                    </div>
+                </div><br>
+                <button class="save">Save</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/emp_home.js"></script>
+</body>
+</html>

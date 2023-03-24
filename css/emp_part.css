@@ -89,7 +89,7 @@
     cursor: pointer;
     background-color: var(--white);
 }
-#home_nav{
+#part_nav{
     background-color: var(--primary-color);
 }
 #home_nav .nav_icon img{
@@ -140,108 +140,97 @@ img{
     text-decoration: none;
     color: var(--white);
 }
-/* ALL ABOUT HOME */
 
-.home{
+/* ALL ABOUT PARTICIPANTS */
+.participants{
     width: 100%;
     height: 100vh;
     padding-left: 2rem;
     padding-top: 2rem;
-    /* overflow-y: scroll; */
-    /* background-color: burlywood; */
-    display: block;
+    overflow-y: scroll;
+    /* background-color: chocolate; */
+    /* display: none; */
 }
-.home .title{
+.participants .part_body h2{
     font-family: Georgia, 'Times New Roman';
-    color: var(--black);
-    margin-bottom: 1rem;
+    color: var(--info-color);
+    margin-top: 1rem;
+    margin-bottom: .5rem;
 }
-.unfinished_div{
-    width: 100%;
-    height: 27rem;
+.all_part{
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: row;
-    margin-bottom: 1rem;
-    border-radius: 10px;
     gap: 1rem;
-    padding: .5rem 0rem 0rem .5rem;
-    background-color: var(--background-secondary);
-}
-.single_task{
-    width: 20rem;
-    height: 25rem;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--primary-color);
-    border-radius: 15px;
-    align-items: center;
-    padding: 1rem .5rem 1rem .5rem;
-}
-.task_title{
-    font-size: 25px;
-    font-weight: bold;
-    font-family: Georgia;
-    margin-bottom: 2rem;
-}
-.task_desc{
-    font-size: 20px;
-    text-align: justify;
-}
-.submit{
-    background-color: var(--white);
-    color: var(--black);
-    font-size: 18px;
-    font-weight: bold;
-    height: 2rem;
-    width: 7rem;
-    border: none;
-    border-radius: 5px;
-    margin-top: 2rem;
-}
-.submit:hover{
-    color: var(--primary-color);
-    cursor: pointer;
-}
-.bottom_div{
-    width: 100%;
-    height: 10rem;
-    align-items: end;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-}
-.report a{
-    text-decoration: none;
-}
-.fin_div{
-    width: 32rem;
-    height: fit-content;
-    background-color: var(--background-secondary);
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    justify-content: center;
-}
-.task{
-    width: 100%;
-    height: fit-content;
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-    padding-left: .5rem;
+    padding-left: 1rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
     padding-right: .5rem;
+    border-radius: 10px;
+    background-color: var(--background-secondary);
 }
-.task .task_title{
-    font-family: 'Times New Roman', Times, serif;
+.all_part .single_user{
+    min-width: 15rem;
+    height: 20rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    gap: 1rem;
+}
+.single_user img{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 12%;
+}
+.username{
+    font-size: 20px;
     font-weight: bold;
+}
+.name , .depart_name{
     font-size: 22px;
-    text-transform: uppercase;
 }
-.task .review{
-    color: var(--primary-color);
-}
-.task .acc_date{
+.depart_name{
     font-weight: bold;
+    color: var(--primary-color);
     float: right;
+}
+.your_dep{
+    width: 65rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    gap: 1rem;
+    overflow-x: scroll;
+    background-color: var(--background-secondary);
+}
+.your_dep .single_user{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: row;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    border-radius: 10px;
+    width: 20rem;
+    height: 10rem;
+    gap: 1rem;
+}
+.single_user .user_contact{
+    gap:2rem;
+}
+.single_user .user_identity{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }

@@ -89,7 +89,7 @@
     cursor: pointer;
     background-color: var(--white);
 }
-#home_nav{
+#setting_nav{
     background-color: var(--primary-color);
 }
 #home_nav .nav_icon img{
@@ -140,108 +140,145 @@ img{
     text-decoration: none;
     color: var(--white);
 }
-/* ALL ABOUT HOME */
 
-.home{
+/* ALL ABOUT PROFILE SETTINGS */
+.profile_settings{
     width: 100%;
-    height: 100vh;
+    height: 97vh;
     padding-left: 2rem;
     padding-top: 2rem;
-    /* overflow-y: scroll; */
-    /* background-color: burlywood; */
-    display: block;
+    overflow-y: scroll;
+    /* background-color: chocolate; */
+    /* display: none; */
 }
-.home .title{
+.profile_settings .prof_body h2{
     font-family: Georgia, 'Times New Roman';
-    color: var(--black);
-    margin-bottom: 1rem;
+    font-size: 20px;
+    color: var(--info-color);
+    margin-top: 1rem;
+    margin-bottom: .5rem;
 }
-.unfinished_div{
+.prof_body{
     width: 100%;
-    height: 27rem;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 1rem;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     border-radius: 10px;
-    gap: 1rem;
-    padding: .5rem 0rem 0rem .5rem;
     background-color: var(--background-secondary);
 }
-.single_task{
-    width: 20rem;
-    height: 25rem;
+.change_pic_div{
+    width: 90%;
+    height: fit-content;
+    /* background-color: aqua; */
+    margin: auto;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.prof_id img{
+    width: 10rem;
+    height: 10rem;
+}
+.prof_id .username{
+    font-size: 25px;
+    text-align: center;
+}
+.prof_more{
+    width: 90%;
+    height: 10rem;
+    text-align: center;
+    margin: auto;
+    gap: 3rem;
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--primary-color);
-    border-radius: 15px;
-    align-items: center;
-    padding: 1rem .5rem 1rem .5rem;
 }
-.task_title{
-    font-size: 25px;
+.prof_desc{
+    font-size: x-large;
+    font-weight: bolder;
+    word-spacing: 10px;
+}
+.change_prof_btns{
+    /* background-color: yellow; */
+    /* width: fit-content; */
+    height: 3rem;
+    gap: 5rem;
+    display: flex;
+    flex-direction: row;
+    margin: auto auto;
+    justify-content: center;
+}
+.change_prof_btns button{
+    width: 9rem;
+    height: 3rem;
+    font-size: larger;
     font-weight: bold;
-    font-family: Georgia;
-    margin-bottom: 2rem;
-}
-.task_desc{
-    font-size: 20px;
-    text-align: justify;
-}
-.submit{
-    background-color: var(--white);
-    color: var(--black);
-    font-size: 18px;
-    font-weight: bold;
-    height: 2rem;
-    width: 7rem;
     border: none;
-    border-radius: 5px;
-    margin-top: 2rem;
+    border-radius: 10px;
+    letter-spacing: -.1px;
 }
-.submit:hover{
+.change_prof_btns button:hover{
     color: var(--primary-color);
     cursor: pointer;
 }
-.bottom_div{
-    width: 100%;
-    height: 10rem;
-    align-items: end;
+.change_pic{
+    color: var(--black);
+    background-color: var(--white);
+}
+.take_pic{
+    color: var(--white);
+    background-color: var(--black);
+}
+.change_names_div , .change_desc_div , .change_location_div{
+    font-size: 20px;
+    font-weight: bold;
+    width: 54.7rem;
+    height: fit-content;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    padding-left: 0rem;
+    padding-right: 3rem;
+    gap: .5rem;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
 }
-.report a{
-    text-decoration: none;
-}
-.fin_div{
-    width: 32rem;
-    height: fit-content;
-    background-color: var(--background-secondary);
+.change_names_div div{
     display: flex;
     flex-direction: column;
-    gap: .5rem;
-    justify-content: center;
 }
-.task{
-    width: 100%;
-    height: fit-content;
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-    padding-left: .5rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    padding-right: .5rem;
+.change_desc_div div input{
+    width: 28.5rem;
+    height: 3rem;
 }
-.task .task_title{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-.task .review{
+input{
+    width: 20rem;
+    height: 2rem;
+    font-size: 20px;
+    outline: none;
     color: var(--primary-color);
 }
-.task .acc_date{
+input:hover{
+    outline-offset: 0px;
+    outline: 2px solid var(--primary-color);
+}
+div div div div div p{
+    color: var(--info-color);
+}
+.prof_body .save, .prof_body .cancel{
+    width: 7rem;
+    height: 3rem;
+    font-size: large ;
     font-weight: bold;
-    float: right;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: -.1px;
+    background-color: var(--white);
+    transition: .5s;
+}
+.prof_body .save:hover, .prof_body .cancel:hover{
+    background-color: var(--black);
+    color: var(--primary-color);
+    cursor: pointer;
 }
