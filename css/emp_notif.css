@@ -209,3 +209,19 @@ img{
     font-size: 20px;
     font-weight: bold;
 }
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 900px) {
+    .time{
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .side{
+        display: none;
+    }
+    .side_bar{
+        display: none;
+    }
+}

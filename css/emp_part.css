@@ -239,3 +239,22 @@ img{
     flex-direction: column;
     gap: .5rem;
 }
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 800px) {
+    .your_dep{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .side{
+        display: none;
+    }
+    .side_bar{
+        display: none;
+    }
+}

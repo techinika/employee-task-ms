@@ -238,7 +238,7 @@ img{
 .change_names_div , .change_desc_div , .change_location_div{
     font-size: 20px;
     font-weight: bold;
-    width: 54.7rem;
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -285,4 +285,31 @@ div div div div div p{
     background-color: var(--black);
     color: var(--primary-color);
     cursor: pointer;
+}
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 900px) {
+    .prof_body .title{
+        display: none;
+    }
+    .change_pic_div{
+        display: flex;
+        flex-direction: column;
+    }
+    .prof_desc{
+        display: none;
+    }
+    .change_names_div , .change_desc_div , .change_location_div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .side{
+        display: none;
+    }
+    .side_bar{
+        display: none;
+    }
 }

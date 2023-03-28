@@ -306,3 +306,50 @@ footer div p{
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 1100px){
+    .site_desc img{
+        display: none;
+    }
+    /* .site_desc .description{
+        display: none;
+    } */
+}
+
+@media only screen and (max-width: 940px){
+    .steps{
+        width: 100%;
+        height: fit-content;
+    }
+    .every_step{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .step{
+        width: 50%;
+    }
+    .benefits{
+        height: fit-content;
+        width: 100%;
+    }
+    .every_benefit{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .benefit{
+        margin: auto;
+        width: 30rem;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 4rem;
+    }
+    footer div{
+        padding-bottom: 0rem;
+    }
+}

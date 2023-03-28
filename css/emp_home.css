@@ -253,9 +253,6 @@ img{
 /* RESPONSIVENESS */
 
 @media only screen and (max-width: 1000px) {
-    .side_bar {
-      background-color: lightblue;
-    }
     .username{
         display: none;
     }
@@ -340,6 +337,15 @@ img{
 }
 
 @media only screen and (max-width: 600px) {
+    .side{
+        display: none;
+    }
+    .side_bar{
+        display: none;
+    }
+    .profile img{
+        display: block;
+    }
     .nav_icon{
         display: block;
         margin-left: 2rem;
