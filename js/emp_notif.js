@@ -1,4 +1,0 @@
-// Javascript
-
-// Selecting HTML elements
-

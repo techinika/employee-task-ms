@@ -1,35 +1,26 @@
-// Javascript
+// Declaring and defining variables
+const get_started_btn = document.querySelector(".get_started")
+const login_btn = document.querySelector(".login")
 
-// Selecting HTML elements
+const overlay = document.querySelector(".overlay")
+const close_btn = document.querySelector(".close")
+const username = document.querySelector(".username")
+const password = document.querySelector(".password")
 
-var close_btn = document.querySelector(".close");
-var overlay = document.querySelector(".overlay");
-
-var all = document.querySelector(".body");
-
-var login_btn = document.querySelector(".login");
-var get_started = document.querySelector(".get_started");
-
-var username = document.querySelector(".username");
-var password = document.querySelector(".password");
-
-// Adding listeners and functions to HTML elements
-
-login_btn.addEventListener("click", (event) => {
-    event.preventDefault()
-    overlay.style.display = "block";
+// Event listeners
+get_started_btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    overlay.style.display = "block"
 })
 
-get_started.addEventListener("click", (event) => {
-    event.preventDefault()
-    overlay.style.display = "block";
+login_btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    overlay.style.display = "block"
 })
 
-close_btn.addEventListener("click", (event) => {
-    event.preventDefault();
-    all.style.overflow = "scroll";
-    overlay.style.display = "none";
-    username.value = "";
-    password.value = "";
+close_btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    overlay.style.display = "none"
+    username.value = ""
+    password.value = ""
 })
-
