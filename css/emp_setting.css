@@ -270,7 +270,7 @@ input:hover{
 div div div div div p{
     color: var(--info-color);
 }
-.prof_body .save, .prof_body .cancel{
+.prof_body .save{
     width: 7rem;
     height: 3rem;
     font-size: large ;
@@ -281,7 +281,7 @@ div div div div div p{
     background-color: var(--white);
     transition: .5s;
 }
-.prof_body .save:hover, .prof_body .cancel:hover{
+.prof_body .save:hover{
     background-color: var(--black);
     color: var(--primary-color);
     cursor: pointer;

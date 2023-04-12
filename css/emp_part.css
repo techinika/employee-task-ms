@@ -192,19 +192,27 @@ img{
 .single_user img{
     height: 70px;
     width: 70px;
-    margin-bottom: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0rem;
+    
 }
-.username{
+.single_user .username{
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
 }
-.name , .depart_name{
+.name , .user_email, .depart_name{
     font-size: 22px;
+    text-align: left;
 }
 .depart_name{
     font-weight: bold;
     color: var(--primary-color);
-    float: right;
+    text-align: center;
+    margin-right: 1rem;
+    text-transform: capitalize;
 }
 .your_dep{
     /* width: 65rem; */
@@ -231,8 +239,8 @@ img{
     height: 10rem;
     gap: 1rem;
 }
-.single_user .user_contact{
-    gap:2rem;
+.single_user .user_contact div{
+    margin-top: .5rem;
 }
 .single_user .user_identity{
     display: flex;
