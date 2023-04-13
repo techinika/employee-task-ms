@@ -29,7 +29,7 @@ close_btn.addEventListener("click", (e) => {
 submit_btn.addEventListener("click", post_info)
 
 // Specifying the Base URl
-const base_url = "http://localhost:3000/auth"
+const base_url = "http://localhost:3000/auth/login"
 
 // Function of verifying user credentials 
 async function post_info(e){
@@ -53,7 +53,7 @@ async function post_info(e){
     // Creating localStorage Items to store user data temporaly
     localStorage.setItem("id", await message.returned.id)
     localStorage.setItem("username", await message.returned.username)
-    localStorage.setItem("password", await message.returned.password)
+    // localStorage.setItem("password", await message.returned.password)
     localStorage.setItem("firstname", await message.returned.firstname)
     localStorage.setItem("lastname", await message.returned.lastname)
     localStorage.setItem("email", await message.returned.email)

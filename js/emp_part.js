@@ -38,7 +38,7 @@ goto_settings.addEventListener('click', (e) => {
 logout_btn.addEventListener('click', () => {
     localStorage.removeItem("id")
     localStorage.removeItem("username")
-    localStorage.removeItem("password")
+    // localStorage.removeItem("password")
     localStorage.removeItem("firstname")
     localStorage.removeItem("lastname")
     localStorage.removeItem("email")
