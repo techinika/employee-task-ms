@@ -1,7 +1,7 @@
-const username = localStorage.getItem("username");
+const access_token = localStorage.getItem("access_token");
 const id = localStorage.getItem("id");
 
-console.log(username)
+console.log(access_token)
 
 const task_title_div = document.querySelector(".task_title")
 const username_div = document.querySelector(".username")
@@ -35,25 +35,20 @@ goto_settings.addEventListener('click', (e) => {
     window.location.replace("../html/emp_setting.html")
 })
 logout_btn.addEventListener('click', () => {
-    localStorage.removeItem("id")
-    localStorage.removeItem("username")
-    localStorage.removeItem("password")
-    localStorage.removeItem("firstname")
-    localStorage.removeItem("lastname")
-    localStorage.removeItem("email")
-    localStorage.removeItem("dep_id")
-    localStorage.removeItem("returned_message")
-
+    localStorage.removeItem("access_token")
 })
 
-username_div.innerHTML = username
+// username_div.innerHTML = username
 
-const base_url = "http://localhost:3000/ems/home/"
+const base_url = "http://localhost:5000/ems/home/"
 
 async function get_unfinished(){
     // if (username.value == "", phone.value == ""){ return }
-    const result = await fetch(base_url + "unfinished/" + id,{
+    const result = await fetch(base_url + "unfinished/" + "58",{
         method: "GET",
+        headers: {
+            Authentication: 'Bearer ' + access_token
+         },
     })
     var unfinished_tasks = await result.json();
     // var finished_tasks = await finished.json()
@@ -91,8 +86,9 @@ async function get_unfinished(){
 }
 
 async function get_finished(){
-    const result = fetch(base_url + "finished/" + id, {
-        method: "GET"
+    const result = fetch(base_url + "finished/" + "81", {
+        method: "GET",
+        auth: "Bearer " + access_token,
     })
     var finished_tasks = await (await result).json();
     console.log(finished_tasks);

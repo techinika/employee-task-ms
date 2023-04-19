@@ -26,13 +26,5 @@ goto_settings.addEventListener('click', (e) => {
     window.location.replace("../html/emp_setting.html")
 })
 logout_btn.addEventListener('click', () => {
-    localStorage.removeItem("id")
-    localStorage.removeItem("username")
-    localStorage.removeItem("password")
-    localStorage.removeItem("firstname")
-    localStorage.removeItem("lastname")
-    localStorage.removeItem("email")
-    localStorage.removeItem("dep_id")
-    localStorage.removeItem("returned_message")
-
+    localStorage.removeItem("access_token")
 })
