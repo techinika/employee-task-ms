@@ -4,7 +4,6 @@ const dep_id = localStorage.getItem("dep_id")
 
 // Getting some HTML elements
 const username_div = document.querySelector(".username");
-// username_div.innerHTML = username
 
 const goto_home = document.querySelector(".goto_home")
 const goto_notifications = document.querySelector(".goto_notifications")
@@ -89,7 +88,6 @@ async function get_all_part(){
     }
 }
 
-// Function of getting all paticipants of specific department
 async function your_dep_part(){
     const result = await fetch(base_url + dep_id, {
         method: "GET",
@@ -100,7 +98,6 @@ async function your_dep_part(){
     var dep_participants = await result.json();
     console.log(dep_participants)
 
-    // Creating HTML elements with paticipants of specific department
     for(let y in dep_participants){
         var single_user = document.createElement('div')
         single_user.className = "single_user"
@@ -134,6 +131,5 @@ async function your_dep_part(){
     }
 }
 
-// Running functions of getting and displaying participants
 get_all_part()
 your_dep_part()

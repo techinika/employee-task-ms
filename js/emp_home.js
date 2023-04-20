@@ -1,7 +1,5 @@
 const access_token = localStorage.getItem("access_token");
 
-console.log(access_token)
-
 const task_title_div = document.querySelector(".task_title")
 const username_div = document.querySelector(".username")
 const task_desc = document.querySelector(".task_desc")
@@ -37,12 +35,9 @@ logout_btn.addEventListener('click', () => {
     localStorage.removeItem("access_token")
 })
 
-// username_div.innerHTML = username
-
 const base_url = "http://localhost:5000/emp/home/"
 
 async function get_unfinished(){
-    // if (username.value == "", phone.value == ""){ return }
     const result = await fetch(base_url + "unfinished/" + "58",{
         method: "GET",
         headers: {
@@ -51,10 +46,8 @@ async function get_unfinished(){
     })
     var returned = await result.json();
     var unfinished_tasks = await returned.unfinished
-    console.log(unfinished_tasks)
 
     var user_details = returned.user_details
-    console.log(user_details)
 
     for(let x in unfinished_tasks) {
         var single_task = document.createElement('div')
@@ -73,9 +66,6 @@ async function get_unfinished(){
         var deadline = document.createElement('div')
         deadline.className = "deadline"
         deadline.innerHTML = "BB: " + unfinished_tasks[x].deadline.slice(0, 10)
-        // var problem = document.createElement('div')
-        // problem.className = "problem"
-        // problem.innerHTML = "Report problem"
 
         unfinished_div.appendChild(single_task);
         single_task.appendChild(task_title);
@@ -83,7 +73,6 @@ async function get_unfinished(){
         single_task.appendChild(submit);
         single_task.appendChild(bottom_div);
         bottom_div.appendChild(deadline);
-        // bottom_div.appendChild(problem);
     }
 
     username_div.innerHTML = user_details.username
@@ -98,7 +87,6 @@ async function get_finished(){
     })
     var returned = await (await result).json();
     var finished_tasks = returned.finished
-    console.log(finished_tasks);
 
     for(let i in finished_tasks) {
         var task = document.createElement('div')
