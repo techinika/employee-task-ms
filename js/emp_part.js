@@ -1,10 +1,10 @@
 // Calling Data stored in localStorage
-const username = localStorage.getItem("username");
+const access_token = localStorage.getItem("access_token");
 const dep_id = localStorage.getItem("dep_id")
 
 // Getting some HTML elements
 const username_div = document.querySelector(".username");
-username_div.innerHTML = username
+// username_div.innerHTML = username
 
 const goto_home = document.querySelector(".goto_home")
 const goto_notifications = document.querySelector(".goto_notifications")
@@ -40,15 +40,26 @@ logout_btn.addEventListener('click', () => {
 })
 
 // Specifying base URL
-const base_url = "http://localhost:3000/ems/participants/"
+const base_url = "http://localhost:5000/emp/participants/"
 
 // Function of getting all participants
 async function get_all_part(){
     const result = await fetch(base_url,{
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + access_token
+        },
     })
-    var all_participants = await result.json();
+    if(!result){
+        window.location.replace("/")
+    }
+    var returned = await result.json();
+    var all_participants = returned.participants
     console.log(all_participants)
+
+    var user_details = returned.user_details
+    console.log(user_details)
+    username_div.innerHTML = user_details.username
 
     // Creating HTML elements with paticipants data in its
     for(let x in all_participants) {
@@ -82,6 +93,9 @@ async function get_all_part(){
 async function your_dep_part(){
     const result = await fetch(base_url + dep_id, {
         method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + access_token
+        },
     })
     var dep_participants = await result.json();
     console.log(dep_participants)
@@ -121,5 +135,5 @@ async function your_dep_part(){
 }
 
 // Running functions of getting and displaying participants
-your_dep_part()
 get_all_part()
+your_dep_part()

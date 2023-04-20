@@ -1,16 +1,7 @@
-const username = localStorage.getItem("username");
-const firstname = localStorage.getItem("firstname")
-const lastname = localStorage.getItem("lastname")
+const access_token = localStorage.getItem("access_token");
 const username_div = document.querySelectorAll(".username");
 const firstname_div = document.querySelector(".first_name")
 const lastname_div = document.querySelector(".last_name")
-
-for (let i in username_div) {
-    username_div[i].innerHTML = username
-}
-
-firstname_div.value = firstname
-lastname_div.value = lastname
 
 const goto_home = document.querySelector(".goto_home")
 const goto_notifications = document.querySelector(".goto_notifications")
@@ -38,3 +29,24 @@ goto_settings.addEventListener('click', (e) => {
 logout_btn.addEventListener('click', () => {
     localStorage.removeItem("access_token")
 })
+
+const base_url = "http://localhost:5000/emp/participants/"
+
+async function get_all_notif(){
+    const result = await fetch(base_url,{
+        method: "GET",
+        headers: {
+            Authorization: 'Bearer ' + access_token
+        },
+    })
+    var returned = await result.json();
+
+    var user_details = returned.user_details
+    console.log(user_details)
+    for (let i in username_div) {
+        username_div[i].innerHTML = user_details.username
+        firstname_div.value = user_details.firstname
+        lastname_div.value = user_details.lastname
+    }
+}
+get_all_notif()
