@@ -36,6 +36,7 @@ goto_settings.addEventListener('click', (e) => {
 // Removing Data in Local storage when logged out
 logout_btn.addEventListener('click', () => {
     localStorage.removeItem("access_token")
+    localStorage.removeItem("dep_id")
 })
 
 // Specifying base URL

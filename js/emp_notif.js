@@ -27,6 +27,7 @@ goto_settings.addEventListener('click', (e) => {
 })
 logout_btn.addEventListener('click', () => {
     localStorage.removeItem("access_token")
+    localStorage.removeItem("dep_id")
 })
 
 const base_url = "http://localhost:5000/emp/participants/"

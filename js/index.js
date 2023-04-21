@@ -50,12 +50,16 @@ async function post_info(e){
     })
     
     const error = await result.json();
-    // console.log(error.error)
+
     const returned_token = await error.token
+    // alert(returned_token)
+    // const returned_id = await error.id
 
     if(returned_token){
         const message = await result.json.message;
         localStorage.setItem("access_token", returned_token)
+        // localStorage.setItem("dep_id", returned_id)
+        // alert(returned_id)
         window.location.replace("../html/emp_home.html")
     }else if(error){
         error_div.style.display = "block"

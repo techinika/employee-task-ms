@@ -160,7 +160,7 @@ img{
     margin-bottom: 1rem;
 }
 .unfinished_div{
-    height: fit-content;
+    min-height: 5rem;
     display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
@@ -173,7 +173,6 @@ img{
 .single_task{
     max-width: 20rem;
     min-width: 18rem;
-    height: 20rem;
     display: flex;
     flex-direction: column;
     border: 2px solid var(--primary-color);
@@ -207,18 +206,26 @@ img{
     cursor: pointer;
 }
 .bottom_div{
-    width: 100%;
-    height: 10rem;
-    align-items: end;
-    display: flex;
-    flex-direction: row;
     gap: 2rem;
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: end;
+}
+.single_task .deadline{
+    width: 100%;
+    margin-top: 1rem;
+    font-weight: bold;
+    float: right;
+    justify-content: end;
 }
 .report a{
     text-decoration: none;
 }
 .fin_div{
-    height: fit-content;
+    min-height: 5rem;
+    width: 70%;
     background-color: var(--background-secondary);
     display: flex;
     flex-direction: column;
@@ -242,10 +249,15 @@ img{
     font-size: 22px;
     text-transform: uppercase;
 }
-.task .review{
-    color: var(--primary-color);
+.task .task_desc{
+    height: fit-content;
 }
-.task .acc_date{
+.task .bottom_div{
+    height: fit-content;
+    justify-content: end;
+}
+.task .deadline{
+    margin-top: .5rem;
     font-weight: bold;
     float: right;
 }
