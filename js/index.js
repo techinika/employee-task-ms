@@ -1,4 +1,4 @@
-// Getting som HTML elements
+// Getting some HTML elements
 const get_started_btn = document.querySelector(".get_started")
 const login_btn = document.querySelector(".login")
 
@@ -52,14 +52,14 @@ async function post_info(e){
     const error = await result.json();
 
     const returned_token = await error.token
-    // alert(returned_token)
+    const returned_id = await error.id
+    const returned_user_id = await error.user_id
     // const returned_id = await error.id
 
     if(returned_token){
-        const message = await result.json.message;
         localStorage.setItem("access_token", returned_token)
-        // localStorage.setItem("dep_id", returned_id)
-        // alert(returned_id)
+        localStorage.setItem("dep_id", returned_id)
+        localStorage.setItem("user_id", returned_user_id)
         window.location.replace("../html/emp_home.html")
     }else if(error){
         error_div.style.display = "block"
@@ -70,21 +70,13 @@ async function post_info(e){
         }, 3000);
     }
     
-    // const returned_user = await returned.user;
     const message = await result.json.message;
 
-    // console.log(await returned[0])
 
     // Creating localStorage Items to store user data temporaly
     localStorage.setItem("access_token", returned_token)
-    // localStorage.setItem("username", await message.username)
-    // localStorage.setItem("password", await message.returned.password)
-    // localStorage.setItem("firstname", await message.firstname)
-    // localStorage.setItem("lastname", await message.lastname)
-    // localStorage.setItem("email", await message.email)
-    // localStorage.setItem("dep_id", await message.dep_id)
 
-    // Redirectin user to the Employee Home page
+    // Redirecting user to the Employee Home page
     if(returned_token){
         window.location.replace("../html/emp_home.html")
     }

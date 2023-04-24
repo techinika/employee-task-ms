@@ -1,6 +1,7 @@
 // Calling Data stored in localStorage
 const access_token = localStorage.getItem("access_token");
 const dep_id = localStorage.getItem("dep_id")
+console.log(dep_id)
 
 // Getting some HTML elements
 const username_div = document.querySelector(".username");
@@ -96,8 +97,9 @@ async function your_dep_part(){
             Authorization: 'Bearer ' + access_token
         },
     })
-    var dep_participants = await result.json();
-    console.log(dep_participants)
+    console.log(dep_id)
+    var results = await result.json();
+    var dep_participants = await results.dep_participants
 
     for(let y in dep_participants){
         var single_user = document.createElement('div')

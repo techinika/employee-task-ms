@@ -29,6 +29,103 @@
     cursor: default;
 }
 
+.error{
+    position: relative;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0rem;
+    margin-bottom: -3rem;
+    font-size: 20px;
+    /* display: none; */
+    color: red;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color:var(--overlay-background);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    z-index: 1;
+    display: none;
+    padding-top: 5rem;
+}
+.container{
+    width: 24rem;
+    height: 30rem;
+    margin: auto;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-secondary);
+}
+.container .log{
+    text-align: center;
+    margin: 1rem auto ;
+    font-size: 30px;
+    color: var(--primary-color);
+    font-family: sans-serif;
+}
+.close{
+    /* background-color: var(--primary-color); */
+    height: 24px;
+    width: 24px;
+    position: relative;
+    margin-top: -3.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    float: right;
+}
+.close:hover{
+    cursor: pointer;
+}
+form div{
+    height: fit-content;
+    margin: 4rem auto;
+    padding: .5rem 3rem 2rem 2rem;
+    /* background-color: blue; */
+    
+}
+form div p{
+    float: right;
+    margin-top: .5rem;
+    font-style: italic;
+}
+form div p a{
+    font-style: normal;
+    color: var(--primary-color);
+}
+input{
+    width: 20rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    color: var(--primary-color);
+    outline: none;
+}
+input:hover{
+    outline-offset: 0px;
+    outline: 1px solid var(--primary-color);
+}
+input::placeholder{
+    font-style: italic;  
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.add_submit{
+    width: 20rem;
+    height: 3rem;
+    background-color: var(--black);
+    border: none;
+    border-radius: 3px;
+    color: var(--white);
+    font-size: larger;
+}
+.add_submit:hover{
+    cursor: pointer;
+}
+
+
 /* SIDE BAR */
 
 .side{
@@ -162,7 +259,7 @@ img{
 .unfinished_div{
     min-height: 5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     margin-bottom: 1rem;
     border-radius: 10px;
     gap: 1rem;
@@ -220,8 +317,26 @@ img{
     float: right;
     justify-content: end;
 }
-.report a{
-    text-decoration: none;
+.create_btn{
+    max-width: 12rem;
+    min-width: 12rem;
+    height: 10rem;
+    margin: auto;
+    display: flex;
+    /* background-color: blueviolet; */
+}
+.create_btn img{
+    max-width: 9rem;
+    min-width: 9rem;
+    margin: auto;
+    height: fit-content;
+    position: relative;
+    padding: .5rem;
+}
+.create_btn img:hover{
+    border-width: 3px;
+    border-style: dashed;
+    cursor: pointer;
 }
 .fin_div{
     min-height: 5rem;

@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="../css/emp_home.css">
 </head>
 <body>
+    <div class="overlay">
+        <div class="container">
+            <h2 class="log">Create task</h2>
+            <img src="../imgs/cancel.png" alt="" class="close">
+            
+            <form>
+                <div class="error">Error</div>
+                <div>
+                    <input type="text" class="add_title" placeholder="Task title" required="required">
+                    <input type="text" class="add_description" placeholder="Description" required="required">
+                    <input type="date" class="add_deadline" placeholder="Deadline" required="required">
+                    <button class="add_submit">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="all">
         <div class="side"></div>
         <div class="side_bar">
@@ -76,6 +92,9 @@
                         <div class="problem"><p class="report">Any problem?<a href=""> Report</a></p></div>
                     </div>
                 </div> -->
+                <div class="create_btn">
+                    <img src="../imgs/add_task.png" alt="" draggable="false">
+                </div>
             </div>
             <h2 class="title">Recently finished</h2>
             <div class="fin_div">
